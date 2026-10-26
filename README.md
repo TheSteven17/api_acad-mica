@@ -57,14 +57,27 @@ Abre la [documentación interactiva Swagger](http://127.0.0.1:8000/docs) para pr
 
 ## Endpoints
 
-| Entidad | Método | Ruta | Operación | Estado éxito |
-| --- | --- | --- | --- | --- |
-| Cursos | `POST` | `/courses` | Crear un curso. | `201` |
-| Cursos | `GET` | `/courses` | Listar todos los cursos. | `200` |
-| Cursos | `GET` | `/courses/{id}` | Consultar curso por ID. | `200` |
-| Estudiantes | `POST` | `/students` | Registrar estudiante. | `201` |
-| Estudiantes | `GET` | `/students` | Listar estudiantes. | `200` |
-| Estudiantes | `GET` | `/students/{id}` | Consultar estudiante por ID. | `200` |
+### Cursos (CRUD completo)
+| Método | Ruta | Operación | Estado éxito |
+| --- | --- | --- | --- |
+| `POST` | `/courses` | Crear un curso. | `201` |
+| `GET` | `/courses` | Listar todos los cursos. | `200` |
+| `GET` | `/courses/{id}` | Consultar curso por ID. | `200` |
+| `PUT` | `/courses/{id}` | Actualizar curso completo. | `200` |
+| `DELETE` | `/courses/{id}` | Eliminar curso. | `200` |
+
+### Estudiantes (CREATE + READ)
+| Método | Ruta | Operación | Estado éxito |
+| --- | --- | --- | --- |
+| `POST` | `/students` | Registrar estudiante. | `201` |
+| `GET` | `/students` | Listar estudiantes. | `200` |
+| `GET` | `/students/{id}` | Consultar estudiante por ID. | `200` |
+
+### Códigos de error
+| Código | Significado |
+| --- | --- |
+| `404` | Recurso no encontrado (ID inexistente) |
+| `422` | Error de validación (datos inválidos o ID no entero) |
 
 ## Estructura del proyecto
 
